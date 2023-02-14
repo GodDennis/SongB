@@ -244,7 +244,6 @@ change.addEventListener('click', () => {
   }
   rename();
   init();
-  randomIndex = Math.floor(Math.random() * 5);
   discripItem[0].style.display = 'block';
   discripItem[1].style.display = 'block';
   cardBody.style.display = 'none';
