@@ -1,0 +1,264 @@
+body {
+  background-color: #222;
+  color: #fff;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.container {
+  padding: 25px 25px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1140px;
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      width: 200px;
+      height: 55px;
+    }
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    .nav__item {
+      background-color: rgb(0, 137, 102);
+      flex: auto;
+      .nav__link {
+        border-color: #007c5d;
+        color: #fff;
+        position: relative;
+        display: block;
+        padding: 0.5rem 0.75rem;
+        line-height: 1.25;
+        border: 0 solid transparent;
+        &:hover {
+          color: #222;
+        }
+      }
+    }
+    .active {
+      background-color: #00bc8c;
+    }
+  }
+  .random {
+    margin: 0 0 25px 0;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #303030;
+    display: flex;
+    gap: 50px;
+    flex-wrap: nowrap;
+    .bird-image {
+      border-radius: 10px;
+      width: 200px;
+      height: 150px;
+    }
+    .flex {
+      display: flex;
+      flex-direction: column;
+      flex: 1, 1, auto;
+      width: 70%;
+      .bird-name {
+        text-align: left;
+        font-size: 2rem;
+        padding: 0 0 25px 0;
+        margin: 0 0 15px 0;
+        border-bottom: solid 1px rgb(115, 115, 115);
+      }
+      .bird-voice {
+        .controls {
+          display: flex;
+          gap: 20px;
+          .playbar {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #00bc8c;
+            border-radius: 50%;
+            vertical-align: middle;
+            text-align: center;
+            svg {
+              width: 18px;
+              height: 18px;
+              transition: 0.2s;
+              margin: 8px;
+              &:hover {
+                width: 20px;
+                height: 20px;
+                margin: 8px;
+              }
+            }
+          }
+          .timebar {
+            position: relative;
+            align-self: center;
+            flex: 1, 1, auto;
+            width: 100%;
+            .timebar-bar {
+              cursor: pointer;
+              height: 4px;
+              margin: 15px 0 8px 0;
+            }
+            .timebar-circle {
+              cursor: pointer;
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              top: 0px;
+              transform: translate(-50%, calc(-50% + 17px));
+              background-color: rgb(115, 115, 115);
+              border-radius: 50%;
+            }
+            .timebar-time-info {
+              display: flex;
+              font-size: 11px;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+  }
+  .row {
+    margin: 0 0 25px 0;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    .answer {
+      overflow: hidden;
+      border-radius: 10px;
+      border: 0.5px solid #444;
+      align-self: center;
+      width: 100%;
+      flex: 1, 1, auto;
+      background-color: #303030;
+
+      .answer-list {
+        .answer-item {
+          transition: all 1.5s;
+          cursor: pointer;
+          text-align: left;
+          border-bottom: 0.5px solid #444;
+          height: 50px;
+          padding: 1.25rem;
+          &:last-child {
+            border-bottom: none;
+          }
+          &::before {
+            content: '';
+            margin: 0 8px 0 0;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #444;
+          }
+          &:hover {
+            background-color: #444;
+          }
+        }
+      }
+    }
+    .description {
+      width: 100%;
+      flex: 1, 1, auto;
+      text-align: left;
+      background-color: #303030;
+      border: 0.5px solid #444;
+      border-radius: 10px;
+      padding: 1rem;
+      line-height: 1.5;
+    }
+  }
+  .change {
+    border-radius: 10px;
+    height: 45px;
+    color: #fff;
+    width: 100%;
+    background-color: #303030;
+    border: 0.5px solid #444;
+    font-size: 0.9375rem;
+    &:hover {
+      background-color: #444;
+    }
+  }
+  .controls {
+    display: flex;
+    gap: 20px;
+    .playbar {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #00bc8c;
+      border-radius: 50%;
+      vertical-align: middle;
+      text-align: center;
+      svg {
+        width: 18px;
+        height: 18px;
+        transition: 0.2s;
+        margin: 8px;
+        &:hover {
+          width: 20px;
+          height: 20px;
+          margin: 8px;
+        }
+      }
+    }
+    .timebar {
+      position: relative;
+      align-self: center;
+      flex: 1, 1, auto;
+      width: 100%;
+      .timebar-bar {
+        cursor: pointer;
+        height: 4px;
+        background: rgb(115, 115, 115) 100%;
+        margin: 15px 0 8px 0;
+      }
+      .timebar-circle {
+        cursor: pointer;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 0px;
+        transform: translate(-50%, calc(-50% + 17px));
+        background-color: rgb(115, 115, 115);
+        border-radius: 50%;
+      }
+      .timebar-time-info {
+        display: flex;
+        font-size: 11px;
+        justify-content: space-between;
+      }
+    }
+  }
+  .card-body {
+    display: none;
+    flex-wrap: wrap;
+    gap: 30px;
+    .card-image {
+      width: 200px;
+      height: 155px;
+      border-radius: 15px;
+    }
+    .list-group {
+      flex: 1 1 auto;
+    }
+    h4 {
+      margin: 0 0 10px 0;
+      font-size: 22.5px;
+      border-bottom: solid 1px rgb(115, 115, 115);
+    }
+    span:first-child {
+      display: block;
+      margin: 0 0 10px 0;
+      border-bottom: solid 1px rgb(115, 115, 115);
+    }
+  }
+}
