@@ -234,7 +234,7 @@ init();
 // NEXT LVL
 function rename() {
   NameItem.textContent = '*******';
-  BirdImage.src = '/img/bird.06a46938.jpg';
+  BirdImage.src = 'img/bird.06a46938.jpg';
 }
 change.addEventListener('click', () => {
   audioChoice.classList.remove('play');
